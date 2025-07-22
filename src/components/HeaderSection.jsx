@@ -1,32 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaArrowRight, FaChevronDown, FaBars } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 import headerbg from '../assets/headerBg.png';
+import mobilebg from '../assets/mobile-bg.svg';
 
 const HeaderSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768); // Tailwind's md breakpoint
+    };
+
+    handleResize(); // set initial state
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const backgroundImage = isDesktop ? `url(${headerbg})` : `url(${mobilebg})`;
+  const backgroundPosition = isDesktop ? 'center 14.25rem' : 'center 3rem';
 
   return (
     <div
-      className="min-h-screen text-white scroll-smooth bg-cover bg-center"
-      style={{ backgroundImage: `url(${headerbg})` }}
+      className="min-h-screen text-white scroll-smooth bg-[#043873] bg-no-repeat bg-contain bg-center"
+      style={{
+        backgroundImage,
+        backgroundPosition,
+      }}
     >
       {/* Navbar */}
-      <nav className="px-6 md:px-20 xl:px-40 py-4 border-b border-white/10 relative">
+      <nav className="px-6 md:px-20 xl:px-40 py-4 2xl:py-6 border-b border-white/10 relative">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <img src={logo} alt="Logo" className="h-8 w-auto" />
 
-          {/* Hamburger Icon - Only on small screens */}
-          <button
-            className="md:hidden text-xl"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
+          {/* Mobile Hamburger */}
+          <button className="md:hidden text-xl" onClick={() => setMenuOpen(!menuOpen)}>
             <FaBars />
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-6 text-sm font-medium ml-auto mr-8">
+          <div className="hidden lg:flex space-x-6 text-sm font-medium ml-auto mr-8 2xl:space-x-10 2xl:text-base">
             <a href="#products" className="hover:text-blue-300 flex items-center gap-1">
               Products <FaChevronDown className="text-xs" />
             </a>
@@ -41,12 +56,12 @@ const HeaderSection = () => {
             </a>
           </div>
 
-          {/* Desktop Action Buttons */}
+          {/* Desktop Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="px-4 py-2 text-sm bg-[#FFE492] text-black rounded hover:bg-yellow-300">
+            <button className="px-4 py-2 text-sm bg-[#FFE492] text-black rounded hover:bg-yellow-300 2xl:px-6 2xl:py-3">
               Login
             </button>
-            <button className="px-4 py-2 text-sm bg-blue-500 text-white rounded hover:bg-blue-900 cursor-pointer flex items-center gap-2">
+            <button className="px-4 py-2 text-sm bg-blue-500 text-white rounded hover:bg-blue-900 cursor-pointer flex items-center gap-2 2xl:px-5 2xl:py-3">
               Try Whitepace free <FaArrowRight className="text-sm" />
             </button>
           </div>
@@ -74,10 +89,10 @@ const HeaderSection = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 xl:px-40 py-16 gap-10">
+      <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 xl:px-40 py-16 gap-10 2xl:mt-15">
         {/* Left Content */}
         <div className="flex-1 max-w-xl space-y-6 text-center md:text-left">
-          <h1 className="text-4xl md:text-4xl font-bold leading-tight">
+          <h1 className="text-stroke font-inter text-4xl md:text-4xl font-bold leading-tight xl:text-6xl">
             Get More Done with <br />
             <span className="text-white">whitepace</span>
           </h1>
@@ -86,15 +101,18 @@ const HeaderSection = () => {
             analyze and manage everyday tasks
           </p>
           <div className="flex justify-center md:justify-start">
-            <button className="bg-blue-500 hover:bg-blue-800 text-white font-medium px-6 py-3 rounded shadow flex items-center gap-2 cursor-pointer">
+            <button className="bg-[#4F9CF9] hover:bg-blue-800 text-white font-medium px-6 py-3 rounded shadow flex items-center gap-2 cursor-pointer 2xl:mt-5">
               Try Whitepace free <FaArrowRight className="text-sm" />
             </button>
           </div>
         </div>
 
-        {/* Right Graphic */}
-        <div className="flex-1 w-full h-64 md:h-96 bg-blue-200 rounded-lg shadow-inner" />
+        {/* Right Graphic (Visible on desktop only) */}
+        <div className="hidden md:block flex-1 w-full h-64 md:h-[28rem] bg-blue-200 rounded-lg shadow-inner" />
       </section>
+
+      {/* Mobile-only Graphic Block */}
+      <div className="block md:hidden h-64 bg-blue-200 rounded-lg shadow-inner mx-5 mt-15" />
     </div>
   );
 };
