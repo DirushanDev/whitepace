@@ -8,5 +8,6 @@ export default defineConfig({
     react(),
     tailwindcss()  
   ],
-  base: "/Whitepace/",
+   base: '/whitepace/', // <-- your repo name here
+   
 })
