@@ -3,7 +3,7 @@ import girl from "../assets/girl.png";
 import man from "../assets/man.png";
 import people from "../assets/people.png";
 import { FaQuoteLeft } from "react-icons/fa";
-
+import brushUnderline from '../assets/underline.png'; // your uploaded brush image
 const testimonials = [
   {
     quote:
@@ -37,14 +37,44 @@ const testimonials = [
 const TestimonialsSection = () => {
   return (
     <section id="solutions" className="py-16 px-4 md:px-20 bg-white text-center">
-      <h2 className="text-3xl md:text-4xl font-bold mb-12">
-        <span className="block xl:hidden">
-          See what our <span className="bg-gradient-to-t from-yellow-400 from-20% to-transparent to-20%">trusted</span> users Say
-        </span>
-        <span className="hidden xl:block">
-          What Our Clien<span className="bg-gradient-to-t from-yellow-400 from-20% to-transparent to-20%">ts S</span>ays
-        </span>
-      </h2>
+    <h2 className="text-3xl md:text-4xl font-bold mb-12">
+  {/* Mobile View */}
+  <span className="block xl:hidden">
+    See what our{' '}
+    <span
+      className="relative inline-block"
+      style={{
+        backgroundImage: `url(${brushUnderline})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 0.9em', // Increased height
+        backgroundPosition: '0 92%',   // Push image lower
+        paddingBottom: '0.2em',        // Adjust spacing
+      }}
+    >
+      trusted
+    </span>{' '}
+    users say
+  </span>
+
+  {/* Desktop View */}
+  <span className="hidden xl:block">
+    What Our Clien
+    <span
+      className="relative inline-block"
+      style={{
+        backgroundImage: `url(${brushUnderline})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 0.9em',  // Increased height
+        backgroundPosition: '0 92%',   // Push image lower
+        paddingBottom: '0.2em',        // Adjust spacing
+      }}
+    >
+      ts S
+    </span>
+    ays
+  </span>
+</h2>
+
 
       <div className="grid md:grid-cols-3 gap-6">
         {testimonials.map((t, index) => (
