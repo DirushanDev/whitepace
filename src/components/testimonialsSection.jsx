@@ -76,37 +76,50 @@ const TestimonialsSection = () => {
 </h2>
 
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {testimonials.map((t, index) => (
-          <div
-            key={index}
-            className={`rounded-xl shadow-md p-6 ${t.bgColor} ${t.textColor}`}
-          >
-            <div className="text-5xl mb-4"><FaQuoteLeft /></div>
-            <p className="mb-6 text-sm md:text-base text-left">{t.quote}</p>
-            <hr className="border-t my-4" />
-            <div className="flex items-center gap-4 mt-4">
-              <img
-                src={t.avatar}
-                alt={t.name}
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <div className="text-left">
-                <p className="font-semibold text-sm md:text-base">{t.name}</p>
-                <p className="text-xs md:text-sm opacity-70">{t.title}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <div className="max-w-7xl mx-auto px-4 py-16">
+  <div className="grid md:grid-cols-3 gap-6">
+    {testimonials.map((t, index) => (
+      <div
+        key={index}
+        className={`rounded-2xl p-6 transition-all duration-300 ${t.bgColor} ${t.textColor} shadow-lg hover:shadow-xl`}
+      >
+        {/* Quote Icon */}
+        <div className="text-4xl mb-4 text-blue-600">
+          <FaQuoteLeft />
+        </div>
 
-      <div className="mt-10">
-        <div className="flex justify-center space-x-1">
-          <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-          <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
-          <span className="w-2 h-2 bg-blue-300 rounded-full"></span>
+        {/* Quote Text */}
+        <p className="text-sm md:text-base mb-6 leading-relaxed text-left">
+          {t.quote}
+        </p>
+
+        {/* Divider */}
+        <div className="border-t border-gray-300 my-4" />
+
+        {/* Author */}
+        <div className="flex items-center gap-4 mt-4">
+          <img
+            src={t.avatar}
+            alt={t.name}
+            className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md"
+          />
+          <div className="text-left">
+            <p className="font-semibold text-sm md:text-base">{t.name}</p>
+            <p className="text-xs md:text-sm opacity-70">{t.title}</p>
+          </div>
         </div>
       </div>
+    ))}
+  </div>
+
+  {/* Pagination Dots */}
+  <div className="mt-10 flex justify-center gap-2">
+    <span className="w-2.5 h-2.5 bg-blue-500 rounded-full" />
+    <span className="w-2.5 h-2.5 bg-blue-300 rounded-full" />
+    <span className="w-2.5 h-2.5 bg-blue-300 rounded-full" />
+  </div>
+</div>
+
     </section>
   );
 };
