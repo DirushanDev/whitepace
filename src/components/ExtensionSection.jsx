@@ -35,7 +35,7 @@ const ExtensionSection = () => {
 
   {/* Right Image Placeholder */}
   <div className="flex-1 flex justify-center">
-  <div className="w-84 md:w-[26rem] h-64 md:h-80 bg-blue-200 rounded-lg shadow-inner" />
+  <div className="w-84 md:w-[35rem] h-64 md:h-80 bg-blue-200 rounded-lg shadow-inner 2xl:ms-10" />
 </div>
 </section>
   );

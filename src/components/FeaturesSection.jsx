@@ -1,5 +1,5 @@
 import React from 'react';
-import OrbitGraphic from './OrbitGraphic';
+
 import { FaArrowRight } from 'react-icons/fa';
 import bgPattern from '../assets/topo-lines.png'; // Replace with your actual file
 import brushUnderline from '../assets/underline.png'; // your uploaded brush image
@@ -14,9 +14,7 @@ const FeaturesSection = () => {
     className="flex-1 max-w-xl space-y-4 text-center md:text-left bg-no-repeat bg-left bg-contain"
     style={{ backgroundImage: `url(${bgPattern})` }}
   >
-    {/* <h2 className="text-4xl md:text-6xl font-bold text-gray-900">
-      Project <span className="underline decoration-yellow-400">Management</span>
-    </h2> */}
+    
   <h2 className="text-4xl md:text-6xl font-bold text-gray-900">
   Project{' '}
   <span
