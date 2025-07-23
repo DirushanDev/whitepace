@@ -88,7 +88,7 @@ const HeaderSection = () => {
           <img
             src={blueimage}
             alt="Mobile Visual"
-            className="w-full max-w-xs h-auto object-contain mt-20"
+            className="w-full max-w-md md:max-w-lg h-auto object-contain rounded-xl shadow-lg border border-gray-200"
           />
         </div>
       </section>
