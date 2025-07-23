@@ -1,5 +1,5 @@
 import React from "react";
-import google from "../assets/google.svg";
+import google from "../assets/google.png";
 import slack from "../assets/slack.png";
 import microsoft from "../assets/microsoft.png";
 import apple from "../assets/apple.png";
@@ -11,7 +11,7 @@ const DataSection = () => {
   return (
     <section id="resources" className="py-16 px-4 sm:px-8 md:px-20 bg-white text-gray-900">
      
-         <section className="flex flex-col-reverse  md:flex-row items-center justify-between px-6 md:px-20 xl:px-40 py-16 gap-10 bg-white">
+         <section className="flex flex-col-reverse  md:flex-row items-center justify-between px-6 md:px-20 xl:px-20 py-16 gap-10 bg-white">
   {/* Left Content */}
   <div className="flex-1 max-w-xl space-y-4 text-center md:text-left">
     <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
@@ -72,10 +72,10 @@ const DataSection = () => {
 
   {/* Sponsor Logos: Responsive Layout */}
    <div className="flex flex-col md:flex-row justify-center items-center gap-12 2xl:gap-42">
-    <img src={apple} alt="Apple" className="h-16 md:h-20" />
-    <img src={microsoft} alt="Microsoft" className="h-16 md:h-20" />
-    <img src={slack} alt="Slack" className="h-16 md:h-20" />
-    <img src={google} alt="Google" className="h-16 md:h-20" />
+    <img src={apple} alt="Apple" className="h-16 md:h-16" />
+    <img src={microsoft} alt="Microsoft" className="h-16 md:h-14" />
+    <img src={slack} alt="Slack" className="h-16 md:h-14" />
+    <img src={google} alt="Google" className="h-16 md:h-14" />
   </div>
 </div>
     </section>
