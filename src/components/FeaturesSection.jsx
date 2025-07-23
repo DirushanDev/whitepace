@@ -10,15 +10,14 @@ const FeaturesSection = () => {
   return (
     <>
       {/* Section 1: Project Management */}
-      <section className="flex flex-col lg:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900 2xl:mx-25 xl:mx-15">
+      <section className="flex flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900">
         {/* Left: Text */}
         <div
-          className="flex-1 space-y-6 text-center lg:text-left bg-no-repeat bg-left bg-contain"
+          className="flex-1 space-y-6 text-center md:text-left bg-no-repeat bg-left bg-contain"
           style={{ backgroundImage: `url(${bgPattern})` }}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-            Project{' '}
-            <br />
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Project <br />
             <span
               className="relative inline-block"
               style={{
@@ -33,12 +32,12 @@ const FeaturesSection = () => {
             </span>
           </h2>
 
-          <p className="text-gray-600 text-base lg:text-lg">
+          <p className="text-gray-600 text-base md:text-lg">
             Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. 
             Take photos with the mobile app and save them to a note.
           </p>
 
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center md:justify-start">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded shadow flex items-center gap-2">
               Get Started <FaArrowRight />
             </button>
@@ -56,8 +55,8 @@ const FeaturesSection = () => {
       </section>
 
       {/* Section 2: Work Together */}
-      <section className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900">
-         {/* Right: Image */}
+      <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900">
+        {/* Right: Image */}
         <div className="flex-1 flex justify-center">
           <img
             src={orbitImage}
@@ -65,9 +64,10 @@ const FeaturesSection = () => {
             className="w-full max-w-md md:max-w-lg h-auto object-contain"
           />
         </div>
+
         {/* Left: Text */}
-        <div className="flex-1 space-y-6 text-center lg:text-left">
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
+        <div className="flex-1 space-y-6 text-center md:text-left">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
             Work{' '}
             <span
               className="relative inline-block"
@@ -83,19 +83,17 @@ const FeaturesSection = () => {
             </span>
           </h2>
 
-          <p className="text-gray-600 text-base lg:text-lg">
+          <p className="text-gray-600 text-base md:text-lg">
             With whitespace, share your notes with your colleagues and collaborate on them.
             You can also publish a note to the internet and share the URL with others.
           </p>
 
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center md:justify-start">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded shadow flex items-center gap-2">
               Try it now <FaArrowRight />
             </button>
           </div>
         </div>
-
-       
       </section>
     </>
   );
