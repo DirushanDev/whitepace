@@ -121,7 +121,7 @@ const HeaderSection = () => {
           <img
             src={blueimage}
             alt="Desktop Visual"
-            className="w-full max-w-xl h-auto object-contain"
+            className="w-full max-w-md md:max-w-lg h-auto object-contain rounded-xl shadow-lg border border-gray-200"
           />
         </div>
       </section>
