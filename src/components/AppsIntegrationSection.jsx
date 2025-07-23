@@ -1,12 +1,12 @@
 import React from "react";
 import circle from "../assets/circle.png";
 import { FaArrowRight } from "react-icons/fa";
-import bgWave from '../assets/headerBg.png'; // wavy background
+import bgWave from '../assets/headerBgnew.png'; // wavy background
 import appsImage from '../assets/apps-network.png'; // left image (circle of apps)
 const AppsIntegrationSection = () => {
   return (
     <section
-  className="bg-no-repeat bg-cover bg-center text-white py-20 px-6 md:px-16 bg-[#043873]"
+  className="bg-no-repeat bg-cover bg-center text-white py-20 px-6 md:px-16 bg-[#043873] md:py-60  "
   style={{
     backgroundImage: `url(${bgWave})`,
   }}
@@ -17,16 +17,16 @@ const AppsIntegrationSection = () => {
       <img
         src={appsImage}
         alt="App Integration Icons"
-        className="w-[300px] md:w-[420px] h-auto object-contain"
+        className="w-full max-w-md md:max-w-lg h-auto object-contain"
       />
     </div>
 
     {/* Right: Text Content */}
     <div className="flex-1 text-center md:text-left">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
+      <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-6">
         Work with Your <br />
         Favorite Apps Using <br />
-        <span className="text-blue-200">whitepace</span>
+        <span className="text-white">whitepace</span>
       </h2>
       <p className="text-white/90 max-w-md mb-6 mx-auto md:mx-0">
         Whitepace teams up with your favorite software. Integrate with over 1000+ apps

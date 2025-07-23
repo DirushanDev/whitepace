@@ -55,7 +55,7 @@ const FeaturesSection = () => {
       </section>
 
       {/* Section 2: Work Together */}
-      <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900 xl:-mx-10 ">
+      <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900 xl:-mx-10  -mt-15 md:mt-0">
         {/* Right: Image */}
         <div className="flex-1 flex justify-center">
           <img

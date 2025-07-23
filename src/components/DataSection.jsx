@@ -9,7 +9,7 @@ import brushUnderline from '../assets/underline.png'; // yellow brush for 'your 
 import dataGraphic from '../assets/dataGraphic.png'; // replace with your uploaded image
 const DataSection = () => {
   return (
-    <section id="resources" className="py-16 px-4 sm:px-8 md:px-20 bg-white text-gray-900">
+    <section id="resources" className="py-16 px-4 sm:px-8 md:px-20 bg-white text-gray-900 -mt-15 md:mt-0">
      
          <section className="flex flex-col-reverse  md:flex-row items-center justify-between px-6 md:px-20 xl:px-20 py-16 gap-10 bg-white">
   {/* Left Content */}
@@ -71,7 +71,7 @@ const DataSection = () => {
 
 
   {/* Sponsor Logos: Responsive Layout */}
-   <div className="flex flex-col md:flex-row justify-center items-center gap-12 2xl:gap-42">
+   <div className="flex flex-col md:flex-row justify-center items-center gap-16 2xl:gap-42">
     <img src={apple} alt="Apple" className="h-16 md:h-16" />
     <img src={microsoft} alt="Microsoft" className="h-16 md:h-14" />
     <img src={slack} alt="Slack" className="h-16 md:h-14" />

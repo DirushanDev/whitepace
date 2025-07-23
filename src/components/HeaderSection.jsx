@@ -70,7 +70,7 @@ const HeaderSection = () => {
       >
         <div className="flex flex-col items-center gap-10">
           {/* ✅ Text First */}
-          <div className="max-w-xl text-center space-y-6">
+          <div className="max-w-xl text-center space-y-6 mt-10 md:mt-0">
             <h1 className="text-stroke font-inter text-4xl font-bold leading-tight">
               Get More Done with <br />
               <span className="text-white">whitepace</span>
@@ -79,7 +79,7 @@ const HeaderSection = () => {
               Project management software that enables your teams to collaborate, plan,
               analyze and manage everyday tasks
             </p>
-            <button className="bg-[#4F9CF9] hover:bg-blue-800 text-white font-medium px-6 py-3 rounded shadow flex items-center gap-2 mx-auto">
+            <button className="bg-[#4F9CF9] hover:bg-blue-800 text-white font-medium px-6 py-3 rounded shadow flex items-center gap-2 mx-auto mt-20 md:mt-0">
               Try Whitepace free <FaArrowRight className="text-sm" />
             </button>
           </div>
@@ -88,7 +88,7 @@ const HeaderSection = () => {
           <img
             src={blueimage}
             alt="Mobile Visual"
-            className="w-full max-w-md md:max-w-lg h-auto object-contain rounded-xl shadow-lg border border-gray-200"
+            className="w-full max-w-md md:max-w-lg h-auto object-contain rounded-xl shadow-lg border border-gray-200 mt-10 md:mt-0 mb-10 md:mb-0"
           />
         </div>
       </section>
