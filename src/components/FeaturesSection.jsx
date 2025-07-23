@@ -10,7 +10,7 @@ const FeaturesSection = () => {
   return (
     <>
       {/* Section 1: Project Management */}
-      <section className="flex flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900">
+      <section className="flex flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900 xl:mx-15 2xl:mx-20">
         {/* Left: Text */}
         <div
           className="flex-1 space-y-6 text-center md:text-left bg-no-repeat bg-left bg-contain"
@@ -55,7 +55,7 @@ const FeaturesSection = () => {
       </section>
 
       {/* Section 2: Work Together */}
-      <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900">
+      <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900 xl:-mx-10 ">
         {/* Right: Image */}
         <div className="flex-1 flex justify-center">
           <img
