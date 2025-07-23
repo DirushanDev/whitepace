@@ -11,7 +11,7 @@ const DataSection = () => {
   return (
     <section id="resources" className="py-16 px-4 sm:px-8 md:px-20 bg-white text-gray-900">
      
-         <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 xl:px-40 py-16 gap-10 bg-white">
+         <section className="flex flex-col-reverse  md:flex-row items-center justify-between px-6 md:px-20 xl:px-40 py-16 gap-10 bg-white">
   {/* Left Content */}
   <div className="flex-1 max-w-xl space-y-4 text-center md:text-left">
     <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
