@@ -62,7 +62,7 @@ const HeaderSection = () => {
 
       {/* ✅ MOBILE HERO VIEW */}
       <section
-        className="block md:hidden w-full px-6 py-16 bg-[#043873] text-white bg-no-repeat bg-contain bg-center"
+        className="block md:hidden w-full px-6 py-16 bg-[#043873] text-white bg-no-repeat bg-cover bg-center"
         style={{
           backgroundImage: `url(${mobilebg})`,
           
