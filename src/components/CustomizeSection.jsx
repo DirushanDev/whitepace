@@ -12,7 +12,7 @@ const CustomizeSection = () => {
         <img
           src={smallBlueImage}
           alt="Customization Preview"
-          className="w-72 md:w-[38rem] h-64 md:h-100 object-contain rounded-lg shadow-inner"
+          className="w-full max-w-md md:max-w-lg h-auto object-contain rounded-xl shadow-lg border border-gray-200"
         />
       </div>
 

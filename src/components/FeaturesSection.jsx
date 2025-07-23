@@ -8,17 +8,17 @@ import smallBlueImage from '../assets/smallblue.png';
 
 const FeaturesSection = () => {
   return (
-    <div className="bg-white text-gray-900 px-4 md:px-20 py-20 space-y-24">
-
+    <>
       {/* Section 1: Project Management */}
-      <section className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+      <section className="flex flex-col lg:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900 2xl:mx-25 xl:mx-15">
         {/* Left: Text */}
         <div
           className="flex-1 space-y-6 text-center lg:text-left bg-no-repeat bg-left bg-contain"
           style={{ backgroundImage: `url(${bgPattern})` }}
         >
-          <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
             Project{' '}
+            <br />
             <span
               className="relative inline-block"
               style={{
@@ -56,8 +56,8 @@ const FeaturesSection = () => {
       </section>
 
       {/* Section 2: Work Together */}
-      <section className="flex flex-col lg:flex-row items-center justify-between gap-10">
-        {/* Left: Image */}
+      <section className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-4 md:px-20 py-20 bg-white text-gray-900">
+         {/* Right: Image */}
         <div className="flex-1 flex justify-center">
           <img
             src={orbitImage}
@@ -65,8 +65,7 @@ const FeaturesSection = () => {
             className="w-full max-w-md md:max-w-lg h-auto object-contain"
           />
         </div>
-
-        {/* Right: Text */}
+        {/* Left: Text */}
         <div className="flex-1 space-y-6 text-center lg:text-left">
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
             Work{' '}
@@ -95,9 +94,10 @@ const FeaturesSection = () => {
             </button>
           </div>
         </div>
-      </section>
 
-    </div>
+       
+      </section>
+    </>
   );
 };
 

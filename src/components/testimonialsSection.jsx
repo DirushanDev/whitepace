@@ -39,25 +39,9 @@ const TestimonialsSection = () => {
     <section id="solutions" className="py-16 px-4 md:px-20 bg-white text-center">
     <h2 className="text-3xl md:text-4xl font-bold mb-12">
   {/* Mobile View */}
-  <span className="block xl:hidden">
-    See what our{' '}
-    <span
-      className="relative inline-block"
-      style={{
-        backgroundImage: `url(${brushUnderline})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 0.9em', // Increased height
-        backgroundPosition: '0 92%',   // Push image lower
-        paddingBottom: '0.2em',        // Adjust spacing
-      }}
-    >
-      trusted
-    </span>{' '}
-    users say
-  </span>
-
+  
   {/* Desktop View */}
-  <span className="hidden xl:block">
+  <span className=" xl:block">
     What Our Clien
     <span
       className="relative inline-block"
