@@ -5,7 +5,7 @@ import smallBlueImage from '../assets/smallblue.png'; // ✅ Use this image
 
 const CustomizeSection = () => {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 xl:px-35 py-16 gap-10 bg-white">
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 xl:px-35 py-16 gap-10 bg-white">
       
       {/* Left Image Preview */}
       <div className="flex-1 flex justify-center">
