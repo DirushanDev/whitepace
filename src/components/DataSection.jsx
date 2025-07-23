@@ -45,7 +45,7 @@ const DataSection = () => {
     <img
       src={dataGraphic}
       alt="Data Protection Graphic"
-      className="w-[22rem] md:w-[28rem] h-auto object-contain"
+      className="w-full max-w-[28rem] h-auto object-contai"
     />
   </div>
 </section>
