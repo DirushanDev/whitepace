@@ -8,7 +8,7 @@ const CustomizeSection = () => {
     <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 xl:px-35 py-16 gap-10 bg-white">
       
       {/* Left Image Preview */}
-      <div className="flex-1 flex justify-center">
+      <div className="flex-1 flex ">
         <img
           src={smallBlueImage}
           alt="Customization Preview"
